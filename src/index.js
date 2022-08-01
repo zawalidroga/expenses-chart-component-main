@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import './index.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
+    <div class="attribution">
+      Challenge by{" "}
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>
+      . Coded by <a href="#">Your Name Here</a>.
+    </div>
   </React.StrictMode>
 );
 

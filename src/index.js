@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-    <div class="attribution">
+    <div className="attribution">
       Challenge by{" "}
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
         Frontend Mentor

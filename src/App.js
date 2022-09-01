@@ -22,9 +22,9 @@ const Container = styled.div`
     margin-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     border-radius: 12px;
-    height: 350px;
+    height: 400px;
     width: 100%;
     background-color: hsl(33, 100%, 98%);
     display: flex;

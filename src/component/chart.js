@@ -15,11 +15,18 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-
+  :hover{
+    .chart-amount{
+      opacity: 1;
+    }
+    .chart-column {
+      opacity: 0.7;
+    }
+  }
   .chart-amount {
     width: 100%;
     height: 25px;
-    padding-top: 7px;
+    padding-top: 8px;
     margin-bottom: 5px;
     border-radius: 5px;
     background-color: hsl(25, 47%, 15%);
@@ -34,10 +41,6 @@ const Container = styled.div`
     margin-bottom: 10px;
     border-radius: 5px;
     background-color: hsl(10, 79%, 65%);
-
-    :hover {
-      background-color: hsl(186, 34%, 60%);
-    }
   }
 }
 `
@@ -63,14 +66,18 @@ function Chart() {
   }
 
   const chartMaker = () => {
+    const date  = new Date();
+    const currentDay = days[date.getDay() === 0 ? 6 : date.getDay() - 1 ];
     const chartex = [];
     for(let i=0; i < 7; i++) {
-      chartex.push(<div className="chart-container"><div className='chart-amount'>{amounts[i]}</div><div className="chart-column mon" id = 'mon' style = {{'height': `${Math.floor(amounts[i]/biggestAmount * 100)}px`}}></div> {days[i]} </div>)
+      chartex.push(<div className="chart-container">
+          <div className='chart-amount'>${amounts[i]}</div>
+          <div className="chart-column" id={days[i]} style = {{'height': `${Math.floor(amounts[i]/biggestAmount * 100)}px`, 'backgroundColor': `${days[i] !== currentDay || 'hsl(186, 34%, 60%)'}`}}></div>
+          {days[i]} 
+         </div>)
     }
     return chartex
   }
-
-
 
   useEffect(() => {
     getData();

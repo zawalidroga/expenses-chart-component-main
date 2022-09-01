@@ -5,8 +5,7 @@ import Chart from './component/chart';
 import Footer from './component/spending-footer';
 
 const Container = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-  font-family: 'Outfit';
+ 
   
   color: hsl(25, 47%, 15%);
   width: 400px;
@@ -14,21 +13,23 @@ const Container = styled.div`
   flex-direction: column;
 
   h3{
+    font-weight: bold;
     font-size: 22px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   .spending {
     box-sizing: border-box;
     margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
     border-radius: 12px;
-    height: 400px;
+    height: 350px;
     width: 100%;
     background-color: hsl(33, 100%, 98%);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     hr {
       margin: 25px 0 25px 0;
       border-top: 1px solid hsl(28, 10%, 53%);

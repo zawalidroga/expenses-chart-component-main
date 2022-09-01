@@ -2,7 +2,7 @@ import styled from "styled-components"
 import React from "react";
 
 const Container = styled.div`
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+    
     background: hsl(10, 79%, 65%);   
     display: flex;
     box-sizing: border-box;
@@ -11,7 +11,6 @@ const Container = styled.div`
     height: 90px;
     width: 400px;
     border-radius: 12px;
-    font-family: 'Outfit';
     color: hsl(27, 66%, 92%);
     flex-direction: row;
     justify-content: space-between;
@@ -24,6 +23,7 @@ const Container = styled.div`
         justify-content: center;
         
         h3 {
+            letter-spacing: 1px;
             font-size: 14px;
             margin: 3px;
             font-weight: normal;
@@ -32,7 +32,7 @@ const Container = styled.div`
         p{
             margin: 3px;
             font-size: 26px;
-            font-weight: normal;
+            font-weight: bold;
         }
     }
 

@@ -3,32 +3,39 @@ import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
 display: grid;
-grid-template-rows: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto auto;
 
 .text {
     font-size: 12px;
     color: hsl(28, 10%, 53%);
-
 }
 
 .text-total {
-    grid-column: 1 span 1;
-    grid-row: 1 1;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
 }
+
 .text-last {
-    grid-column: 2 2;
-    grid-row: 2 2;
+    justify-self: end;
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
 }
+
 .total-numb{
-    font-size: 22px;
-    grid-column: 1 1;
-    grid-row: 2 2;
+    font-weight: bold;
+    align-self: end;
+    font-size: 36px;
+    grid-column: 1 / 1;
+    grid-row: 2 / span 2;
 }
 
 .last-numb {
-    grid-column: 2 2;
-    grid-row: 1 1;
+    font-weight: bold;
+    align-self: end;
+    justify-self: end;
+    grid-column: 2 / 2;   
+    grid-row: 2 / 2;
 }
 `
 
